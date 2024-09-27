@@ -25,6 +25,8 @@ public class MyArrays{
     }
     return result;
   }
+  
+  System.out.println()
 
   public static int[] concatArray(int[] ary1, int[] ary2){
     int[] result = new int[ary1.length + ary2.length];
@@ -39,6 +41,7 @@ public class MyArrays{
   }
   public static void main(String[] args)
   {
+    System.out.println(arrayToString())
 
   }
 }
