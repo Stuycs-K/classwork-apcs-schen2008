@@ -21,6 +21,7 @@ public class ArrayMethods{
     int[][] arr3 = {{1},{2,3},{4,5,6}};
     int[][] arr4 = {{}};
     int[][] arr5 = {{1,2},{},{5,6,7}};
+    int[][] swap1 ={{6,8},{99,9},{16,-6}};
     System.out.println("arrToString");
     System.out.println(arrToString(arr1));
     System.out.println(arrToString(arr2));
@@ -33,11 +34,9 @@ public class ArrayMethods{
     System.out.println(arr2DSum(arr3));
     System.out.println(arr2DSum(arr4));
     System.out.println(arr2DSum(arr5));
-    System.out.println(swapRC(arr1));
-    System.out.println(arr2DSum(arr2));
-    System.out.println(arr2DSum(arr3));
-    System.out.println(arr2DSum(arr4));
-    System.out.println(arr2DSum(arr5));
+    System.out.println("swapRC");
+    System.out.println(arrToString(swapRC(arr1)));
+    System.out.println(arrToString(swapRC(swap1)));
   }
 
   public static String arrToString(int[][] nums){
@@ -69,12 +68,12 @@ public class ArrayMethods{
   public static int[][] swapRC(int[][]nums){
     int sublen = nums[0].length;
     int mainlen = nums.length;
-    int[][] result = new int[sublen][nmainlen];
-    int resublist = 0;
+    int[][] result = new int[sublen][mainlen];
     // need a loop that iterates through the first value of every sublist, then the second value of every sublist, etc
     for(int i = 0; i < nums.length; i++){
-      result[resublist][i] = nums[i][resublist];
-      resublist++;
+      for(int x = 0; x < sublen; x++){
+        result[x][i] = nums[i][x];
+      }
     }
     return result;
 
