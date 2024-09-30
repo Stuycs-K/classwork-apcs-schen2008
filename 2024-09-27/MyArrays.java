@@ -26,16 +26,16 @@ public class MyArrays{
     return result;
   }
   
-  public static int[] concatArray(int[] ary1, int[] ary2){
-    int[] result = new int[ary1.length + ary2.length];
+  public static int[] concatArray(int[]ary1,int[]ary2){
+    int[] result = new int[ary1.length + ary2.length]; 
     int track = 0;
-    for(int i = 0; i<ary1.length;i++){
-      result[track] = ary1[i];
-      track++;
+    for (int i = 0; i < ary1.length; i++){
+      result[track] = ary1[i]; 
+      track++; 
     }
-    for(int x = 0; x < ary2.length; x++){
-      result[track] = ary1[x];
-      track++;
+    for (int x = 0; x < ary2.length; x++){
+      result[track] = ary2[x]; 
+      track++; 
     }
     return result;
   }
@@ -44,7 +44,7 @@ public class MyArrays{
     int[] arr1 = {1,2,3,4,5};
     int[] arr2 = {};
     int[] arr3 = {10000,1000,10,0,-5};
-    int[] arr4 = {0,0,0,0,0,0,0,1};
+    int[] arr4 = {0,0,0,0,0,0,0,0,1};
     int[] arr5 = {-5,-24,1,55,4,5,15};
 
   System.out.println("ARYTOSTRING");
