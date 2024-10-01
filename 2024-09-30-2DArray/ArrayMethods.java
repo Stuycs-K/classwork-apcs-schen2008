@@ -22,6 +22,7 @@ public class ArrayMethods{
     int[][] arr4 = {{}};
     int[][] arr5 = {{1,2},{},{5,6,7}};
     int[][] swap1 ={{6,8},{99,9},{16,-6}};
+    int[][] swap2 ={{6,8,1,2,3},{99,9,0,0,0},{16,-6,-3,3,2}};
     System.out.println("arrToString");
     System.out.println(arrToString(arr1));
     System.out.println(arrToString(arr2));
@@ -37,6 +38,7 @@ public class ArrayMethods{
     System.out.println("swapRC");
     System.out.println(arrToString(swapRC(arr1)));
     System.out.println(arrToString(swapRC(swap1)));
+    System.out.println(arrToString(swapRC(swap2)));
   }
 
   public static String arrToString(int[][] nums){
