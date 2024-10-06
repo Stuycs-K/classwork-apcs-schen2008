@@ -43,6 +43,12 @@ public class ArrayMethods{
     System.out.println(arrToString(test4));
     System.out.println(arrToString(test5));
     System.out.println(arrToString(test6));
+    System.out.println("COPY");
+    System.out.println(arrToString(copy((arr1))));
+    System.out.println(arrToString(copy((arr2))));
+    System.out.println(arrToString(copy((arr3))));
+    System.out.println(arrToString(copy((arr4))));
+    System.out.println(arrToString(copy((arr5))));
 
 
   }
