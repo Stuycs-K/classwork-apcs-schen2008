@@ -1,20 +1,5 @@
 // Sean Chen, seanc4194@nycstudents.net, Stephen Chen stephenc88@nycstsudents.net
 public class ArrayMethods{
-  public static String arrToString(int[] nums){
-    String result = "[";
-    for(int i = 0; i < nums.length; i++)
-    {
-      if(i == nums.length-1)
-      {
-        result += nums[i];
-      }
-      else
-      {
-      result += nums[i] + ",";
-      }
-    }
-    return result + "]";
-  }
   public static void main(String[] args){
     int[][] arr1 = {{1,2},{4,5},{6,7}};
     int[][] arr2 = {};
@@ -40,7 +25,22 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(swap1)));
     System.out.println(arrToString(swapRC(swap2)));
   }
-
+  public static String arrToString(int[] nums){
+    String result = "[";
+    for(int i = 0; i < nums.length; i++)
+    {
+      if(i == nums.length-1)
+      {
+        result += nums[i];
+      }
+      else
+      {
+      result += nums[i] + ",";
+      }
+    }
+    return result + "]";
+  }
+  
   public static String arrToString(int[][] nums){
     String result = "[";
     for (int i = 0; i < nums.length; i++){
@@ -80,6 +80,22 @@ public class ArrayMethods{
     return result;
 
   }
+  public static void replaceNegative(int[][] vals){
+    for (int i = 0; i < vals.length; i++){
+      for (int j = 0; j < vals[i].length; j++){
+        if (vals[i][j] < 0){
+          if(i == j){
+            vals[i][j] = -1;
+          }
+          else{
+            vals[i][j] = 0;
+          }
+        }
+      }
+    }
+  }
 }
+
+
 
 
