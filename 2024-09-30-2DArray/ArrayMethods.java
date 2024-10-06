@@ -24,6 +24,27 @@ public class ArrayMethods{
     System.out.println(arrToString(swapRC(arr1)));
     System.out.println(arrToString(swapRC(swap1)));
     System.out.println(arrToString(swapRC(swap2)));
+    System.out.println("replaceNegative");
+    int[][] test1 = {};
+    int[][] test2 = {{}};
+    int[][] test3 = {{-1, -2, -3}};
+    int[][] test4 = {{1, 2, -3}, {7, -8, 2}};
+    int[][] test5 = {{0, -5, -2}, {11,12,-13}, {3, 3, -3}};
+    int[][] test6 = {{-4, 0}, {7}, {-2, 9, -10}};
+    replaceNegative(test1);
+    replaceNegative(test2);
+    replaceNegative(test3);
+    replaceNegative(test4);
+    replaceNegative(test5);
+    replaceNegative(test6);
+    System.out.println(arrToString(test1));
+    System.out.println(arrToString(test2));
+    System.out.println(arrToString(test3));
+    System.out.println(arrToString(test4));
+    System.out.println(arrToString(test5));
+    System.out.println(arrToString(test6));
+
+
   }
   public static String arrToString(int[] nums){
     String result = "[";
