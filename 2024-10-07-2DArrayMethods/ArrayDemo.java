@@ -1,16 +1,6 @@
 import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
-    int[] arr1 = {1,2,3,4,5,6};
-    int[][] list1 = {{1,2},{2,3},{7,8}};
-    System.out.println("arrToString Test");
-    System.out.println("Arrays.toString: " + Arrays.toString(arr1));
-    System.out.println("arrToString: " + arrToString(arr1));
-    //write your tests here!
-    //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
-    //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
-    //do not use any other Arrays.method()
-
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
@@ -48,7 +38,15 @@ public class ArrayDemo{
 
   //1. Calculate and return how many elements equal zero in the 2D array.
   public static int countZeros2D(int[][] nums){
-    return 0;
+    int x = 0;
+    for(int i = 0; i < nums.length; i++){
+      for(int z = 0; z < nums[i].length;z++){
+        if(nums[i][z] == 0){
+          x++;
+        }
+      }
+    }
+    return x;
   }
 
   //2. Calculate the sum of a 2d array
@@ -125,6 +123,16 @@ public class ArrayDemo{
   //   e.g. htmlTable(new int[][]{{1,2},{3}})  returns:
   // "<table><tr><td>1</td><td>2</td></tr><tr><td>3</td></tr></table>"
   public static String htmlTable(int[][]nums){
-    return "";
+    String result = "<table>";
+    for(int i = 0; i < nums.length; i++){
+      result += "<tr>";
+      for(int x = 0; x < nums[i].length; x++){
+        result += "<td>";
+        result += nums[i][x]; 
+        result += "</td>";
+      }
+      result += "</tr>";
+    }
+    return result + "</table>";
   }
 }
