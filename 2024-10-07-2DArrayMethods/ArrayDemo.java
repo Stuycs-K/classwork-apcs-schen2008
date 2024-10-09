@@ -1,6 +1,31 @@
 import java.util.Arrays;
 public class ArrayDemo{
   public static void main(String[]args){
+    int[] arr1 = {1,2,3,-4,5,-6};
+    int[][] list1 = {{1,2},{2,-3},{7,-8}};
+    int[][] list2 = {{0,0},{0},{0,-2,3,4,-50},{0}};
+    int[][] list3 = {{15,10},{-2,-333},{157,-8}};
+    System.out.println("arrToString Test");
+    System.out.println("Arrays.toString: " + Arrays.toString(arr1));
+    System.out.println("arrToString: " + arrToString(arr1));
+    System.out.println("Arrays.deepToString: " + Arrays.deepToString(list1));
+    System.out.println("arrToString: " + arrToString(list1));
+    System.out.println(arr2DSum(list1)); // 5
+    System.out.println(arr2DSum(list2)); // 0
+    System.out.println(arrToString(copy(list1)));
+    System.out.println(arrToString(copy(list2)));
+    System.out.println(arrToString(swapRC(list1)));
+    System.out.println(arrToString(swapRC(list3)));
+    System.out.println(countZeros2D(list2));
+    System.out.println(htmlTable(list2));
+    replaceNegative(list1);
+    replaceNegative(list2);
+    System.out.println(arrToString(list1));
+    System.out.println(arrToString(list2));
+    //write your tests here!
+    //You can now use Arrays.toString(yourArray) instead of writing arrayToString again.
+    //Compare Arrays.toString(yourArray) to YOUR arrayToString() method to make sure yours is correct
+    //do not use any other Arrays.method()
   }
 
   //0. Include your prior methods to help you print a 1D/2D array of ints.
