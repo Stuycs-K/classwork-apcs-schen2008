@@ -10,8 +10,8 @@ public class ArrayDemo{
     System.out.println("arrToString: " + arrToString(arr1));
     System.out.println("Arrays.deepToString: " + Arrays.deepToString(list1));
     System.out.println("arrToString: " + arrToString(list1));
-    System.out.println(arr2DSum(list1)); // 5
-    System.out.println(arr2DSum(list2)); // 0
+    System.out.println(arr2DSum(list1));
+    System.out.println(arr2DSum(list2));
     System.out.println(arrToString(copy(list1)));
     System.out.println(arrToString(copy(list2)));
     System.out.println(arrToString(swapRC(list1)));
