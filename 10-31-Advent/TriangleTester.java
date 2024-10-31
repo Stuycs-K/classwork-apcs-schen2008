@@ -17,10 +17,11 @@ public class TriangleTester{
         System.out.println(input.nextLine());
         //do something with the next line of the file
       }
-      int sum = 0;
-      while(input.hasNextInt()){
-        sum+=input.nextInt();//read all the numbers and add to sum
+      double sum = 0;
+      while(sc2.hasNextDouble()){
+        sum+=sc2.nextDouble();//read all the numbers and add to sum
       }
+      System.out.println(sum);
     }
 
 }
