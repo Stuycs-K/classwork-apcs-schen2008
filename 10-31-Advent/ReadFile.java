@@ -8,8 +8,11 @@ public class ReadFile {
   public static void main(String[] args) {
     //2 Opening a file requires a try/catch
     try {
-      File file = new File("PUT_FILENAME_HERE");//1
+      File file = new File("TriangleTester.java");//1
       Scanner input = new Scanner(file);
+      while(input.hasNextLine()){
+        System
+      }
       //CODE THAT SCANS THE FILE.
       input.close();//releases the file from your program
 
