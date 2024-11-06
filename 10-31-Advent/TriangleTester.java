@@ -8,16 +8,39 @@ public class TriangleTester{
     try{
       File input = new File(filename);
       Scanner file = new Scanner(input);
-    while(file.hasNextLine()){
-      String[] sides = file.nextLine().split(" ");
-      int a = Integer.parseInt(sides[0]);
-      int b = Integer.parseInt(sides[1]);
-      int c = Integer.parseInt(sides[2]); 
-      if(a < b+c && b < a+c && c < a+b){
-        counter++;
-      }
+      while(file.hasNextLine()){
+        String[] sides = file.nextLine().split(" ");
+        int a = Integer.parseInt(sides[0]);
+        int b = Integer.parseInt(sides[1]);
+        int c = Integer.parseInt(sides[2]); 
+        if(a < b+c && b < a+c && c < a+b){
+          counter++;
+        }
     }
     } catch (FileNotFoundException ex) {
+      System.out.println("File not found");
+    }
+    return counter;
+  }
+  public static int countTrianglesB(String filename){
+    int counter = 0;
+    try{
+      File input = new File(filename);
+      Scanner file = new Scanner(input);
+      while(file.hasNextLine()){
+        String[] row1 = file.nextLine().split(" ");
+        String[] row2 = file.nextLine().split(" ");
+        String[] row3 = file.nextLine().split(" ");
+        for(int i = 0; i < 2; i++){
+          int a = Integer.parseInt(row1[i]);
+          int b = Integer.parseInt(row2[i]);
+          int c = Integer.parseInt(row3[i]);
+          if(a < b+c && b < a+c && c < a+b){
+            counter++;
+        }  
+      }
+      
+    }catch(FileNotFoundException ex){
       System.out.println("File not found");
     }
     return counter;
