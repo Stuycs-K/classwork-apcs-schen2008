@@ -21,24 +21,39 @@ public class TriangleTester{
     }
     return counter;
   } 
+  public static boolean isTriangle(int a, int b, int c){
+    {
+      if(a < b+c && b < a+c && c < a+b){
+        return true;
+    }  
+    return false;
+    }
+  }
   public static int countTrianglesB(String filename){
     int counter = 0;
     try{
       File input = new File(filename);
       Scanner file = new Scanner(input);
-      while(file.hasNextLine()){
-        String[] row1 = file.nextLine().split(" ");
-        String[] row2 = file.nextLine().split(" ");
-        String[] row3 = file.nextLine().split(" ");
-        for(int i = 0; i < 2; i++){
-          int a = Integer.parseInt(row1[i]);
-          int b = Integer.parseInt(row2[i]);
-          int c = Integer.parseInt(row3[i]);
-          if(a < b+c && b < a+c && c < a+b){
-            counter++;
-        }  
+      while(file.hasNextInt()){
+        int a1 = file.nextInt();
+        int a2 = file.nextInt();
+        int a3 = file.nextInt();
+        int b1 = file.nextInt();
+        int b2 = file.nextInt();
+        int b3 = file.nextInt();
+        int c1 = file.nextInt();
+        int c2 = file.nextInt();
+        int c3 = file.nextInt();
+        if(isTriangle(a1,b1,c1)){
+          counter++;
+        }
+        if(isTriangle(a2,b2,c2)){
+          counter++;
+        }
+        if(isTriangle(a3,b3,c3)){
+          counter++;
+        }
       }
-    } 
     }catch(FileNotFoundException ex){
       System.out.println("File not found");
     }
@@ -46,7 +61,7 @@ public class TriangleTester{
   }
 
   public static void main(String[] args) {
-    //System.out.println(countTrianglesA("inputTri.txt"));
+    System.out.println(countTrianglesA("inputTri.txt"));
     System.out.println(countTrianglesB("inputTri.txt"));
     /*
       String text = "This is a sample\nOf how to read\ntext!";
