@@ -1,6 +1,31 @@
 import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class TriangleTester{
+  public static int countTrianglesA(String filename){
+    try{
+      File file = new File(filename);
+      int counter = 0;
+    while(filename.hasNextLine()){
+      String[] sides = input.nextLine().split(" ");
+      int a = Integer.parseInt(sides[0]);
+      int b = Integer.parseInt(sides[1]);
+      int c = Integer.parseInt(sides[2]); 
+      if(a < b+c || b < a+c || c < a+b){
+        counter++;
+      }
+    }
+    return counter;
+    } catch (FileNotFoundException ex) {
+      System.out.println("File not found");
+    }
+  }
+
   public static void main(String[] args) {
+    
+    /*
       String text = "This is a sample\nOf how to read\ntext!";
 
       // creates a Scanner object to read throug the String
@@ -22,6 +47,7 @@ public class TriangleTester{
         sum+=sc2.nextDouble();//read all the numbers and add to sum
       }
       System.out.println(sum);
+      */
     }
 
 }
