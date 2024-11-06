@@ -8,20 +8,19 @@ public class TriangleTester{
     try{
       File input = new File(filename);
       Scanner file = new Scanner(input);
-      while(file.hasNextLine()){
-        String[] sides = file.nextLine().split(" ");
-        int a = Integer.parseInt(sides[0]);
-        int b = Integer.parseInt(sides[1]);
-        int c = Integer.parseInt(sides[2]); 
-        if(a < b+c && b < a+c && c < a+b){
-          counter++;
+        while(file.hasNextInt()){
+          int a = file.nextInt();
+          int b = file.nextInt();
+          int c = file.nextInt(); 
+          if(a < b+c && b < a+c && c < a+b){
+            counter++;
+          }
         }
-    }
     } catch (FileNotFoundException ex) {
       System.out.println("File not found");
     }
     return counter;
-  }
+  } 
   public static int countTrianglesB(String filename){
     int counter = 0;
     try{
@@ -39,7 +38,7 @@ public class TriangleTester{
             counter++;
         }  
       }
-      
+    } 
     }catch(FileNotFoundException ex){
       System.out.println("File not found");
     }
@@ -47,7 +46,8 @@ public class TriangleTester{
   }
 
   public static void main(String[] args) {
-    System.out.println(countTrianglesA("inputTri.txt"));
+    //System.out.println(countTrianglesA("inputTri.txt"));
+    System.out.println(countTrianglesB("inputTri.txt"));
     /*
       String text = "This is a sample\nOf how to read\ntext!";
 
