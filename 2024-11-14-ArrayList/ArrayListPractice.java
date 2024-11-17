@@ -36,12 +36,29 @@ public class ArrayListPractice{
     }
     return result;
    }
-}
-
   
-  //
-  // public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
-  //   //return a new ArrayList that has all values of a and b in alternating order that is:
-  //   //a[0], b[0], a[1], b[1]...
-  //   //If one list is longer than the other, just attach the remaining values to the end.
-  // }
+  public static ArrayList<String> mixLists( ArrayList<String> a,  ArrayList<String> b){
+    //return a new ArrayList that has all values of a and b in alternating order that is:
+    //a[0], b[0], a[1], b[1]...
+    //If one list is longer than the other, just attach the remaining values to the end.
+    int smallsize = 0;
+    if(a.size() > b.size()) smallsize = b.size();
+    else smallsize = a.size();
+    ArrayList<String> result = new ArrayList<String>();
+    for(int i = 0; i < smallsize; i++){
+     result.add(a.get(i));
+     result.add(b.get(i));
+    }
+    if(a.size() > b.size()){
+      for(int i = smallsize; i  < a.size(); i++){
+        result.add(a.get(i));
+      }
+    }
+    else if (b.size() > a.size()){
+      for(int i = smallsize; i < b.size(); i++){
+        result.add(b.get(i));
+      }
+    }
+    return result;
+  }
+}
