@@ -67,7 +67,7 @@ public class Driver{
         return result;
     }
     public static void drawSeperator(int row, int width){
-        for(int i = 0; i <= width-1;i++){
+        for(int i = 2; i <= width-1;i++){
             Text.go(row, i);
             Text.color(Text.BLACK, Text.background(Text.WHITE));
             System.out.println("=");
