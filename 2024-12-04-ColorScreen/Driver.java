@@ -6,6 +6,7 @@ public class Driver{
         drawBorder(width, height);
         int[] nums = randArray();
         int column = 0;
+        drawSeperator(height/2,width);
         for(int i = 0; i < 3; i++){
             column += (int) 78/4;
             if(nums[i] < 25){
@@ -19,8 +20,32 @@ public class Driver{
             }
             Text.go(2, column);
             System.out.println(nums[i]);
+            if(column < 25){
+                for(int h = 3; h < 27; h++){
+                    Text.go(h,column);
+                    Text.color(Text.BRIGHT, Text.RED);
+                    System.out.println("||");
+                }
+            }
+            else if(column > 25 && column < 50){
+                for(int z = 3; z < 27; z++){
+                    Text.go(z,column);
+                    Text.color(Text.BRIGHT, Text.GREEN);
+                    System.out.println("||");
+                }
+            }
+            else{
+                for(int f = 3; f < 27; f++){
+                    Text.go(f,column);  
+                    Text.color(Text.BRIGHT, Text.BLUE);
+                    System.out.println("||");
+                }
+            }
+            Text.go(31,0);
+            System.out.print(Text.RESET);
         }
-        drawSeperator(height/2,width);
+
+
 
     }
     public static void drawBorder(int width, int height) {
