@@ -9,7 +9,7 @@ public class Swordsman extends Adventurer{
         super(name);
     }
     public String getSpecialName(){
-        return "qi";
+        return "Qi Sword";
     }
     public void setSpecial(int n){
         qi = n;
@@ -43,7 +43,7 @@ public class Swordsman extends Adventurer{
         if(qi-1 >= 0){
             qi--;
             other.applyDamage(8);
-            return getName() + " used Qi Sword on " + other.getName() + " for 8 damage!";
+            return getName() + " used " + getSpecialName() + " on " + other.getName() + " for 8 damage!";
         }
         else{
             return "No qi! Attack failed!";
