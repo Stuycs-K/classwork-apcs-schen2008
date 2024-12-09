@@ -2,11 +2,13 @@ import java.util.Random;
 public class Swordsman extends Adventurer{
     private int qi;
     private int maxQi;
-    public Swordsman(String name, int hp) {
+    public Swordsman(String name, int hp, int qi, int maxQi) {
         super(name, hp);
+        this.qi = qi;
+        this.maxQi = maxQi;
     }
     public Swordsman(String name) {
-        super(name);
+        This(name, 10, 5, 5);
     }
     public String getSpecialName(){
         return "Qi Sword";
