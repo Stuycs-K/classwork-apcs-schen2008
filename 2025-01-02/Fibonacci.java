@@ -15,6 +15,7 @@ public class Fibonacci{
   public static void main(String[] args){
     if(args[1].equals("fib")){
       fib(Integer.parseInt(args[0]));
+      System.out.println(fib(Integer.parseInt(args[0])));
     }
   }
 }
